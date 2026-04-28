@@ -10,6 +10,11 @@ with open("Shaolin.txt", "w") as foyl:
 with open("Shaolin.txt", "a") as foyl:
     foyl.write("\nDon't go there, mannnn.")
 
+with open("Shaolin.txt", "r") as foyl:
+    lines = foyl.readlines()
+    print(lines)
+
+
 
 
 
