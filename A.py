@@ -6,3 +6,10 @@ except:
 
 with open("Shaolin.txt", "w") as foyl:
     foyl.write("Wassap mga ka wonders!")
+
+with open("Shaolin.txt", "a") as foyl:
+    foyl.write("\nDon't go there, mannnn.")
+
+
+
+
