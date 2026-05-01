@@ -37,10 +37,17 @@ while True:
                     print("Added contents successfully!")
             except:
                 print("DILI GA EXIST ANG FILE OY...")
-        case 3:
-                with open(filename, "r") as file:
-                    contents = file.readlines()
-                    print("\n",contents)
+       case 3:
+    try:
+        filename = input("Enter the filename to read: ")
+        if not os.path.exists(filename):
+            print("File does not exist.")
+        else:
+            with open(filename, "r") as file:
+                contents = file.read()
+                print("\n" + contents)
+    except:
+        print("Error reading file.")
         case 4:
             with open(filename, "r") as file:   
                 pass
