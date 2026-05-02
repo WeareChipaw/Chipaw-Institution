@@ -37,20 +37,34 @@ while True:
                     print("Added contents successfully!")
             except:
                 print("DILI GA EXIST ANG FILE OY...")
-       case 3:
-    try:
-        filename = input("Enter the filename to read: ")
-        if not os.path.exists(filename):
-            print("File does not exist.")
-        else:
-            with open(filename, "r") as file:
-                contents = file.read()
-                print("\n" + contents)
-    except:
-        print("Error reading file.")
+        case 3:
+                try:
+                    filename = input("Enter the filename to read: ")
+                    if not os.path.exists(filename):
+                        print("File does not exist.")
+                    else:
+                        with open(filename, "r") as file:
+                            contents = file.read()
+                            print("\n" + contents)
+                except:
+                    print("File already exists.")
         case 4:
-            with open(filename, "r") as file:   
-                pass
+            try:
+                filename = input("Enter the filename to update: ")
+                if not os.path.exists(filename):
+                    print("File does not exist.")
+                else:
+                    with open(filename, "r") as file:
+                        old_contents = file.read()
+                        print("- Current Contents -")
+                        print(old_contents)
+
+                        new_contents = input("\nWrite new contents: ")
+                        with open(filename, "w") as file:
+                            file.write(new_contents)
+                            print("File updated succesfully!")
+            except:
+                print("Error updating file.")
         case 5:
             print("Delete")
         case 6:
