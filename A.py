@@ -66,7 +66,15 @@ while True:
             except:
                 print("Error updating file.")
         case 5:
-            print("Delete")
+            try:
+                filename = input("Enter the filename to delete: ")
+                if os.path.exists(filename):
+                    os.remove(filename)
+                    print("File deleted.")
+                else:
+                    print("File does not exist.")
+            except:
+                print("Error deleting file.")
         case 6:
             print("Exiting....")
             break
